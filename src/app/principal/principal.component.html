@@ -23,6 +23,12 @@
         </tr>
     </thead>
     <tbody>
-
+        <tr *ngFor="let c of clientes; index as i">
+            <td>{{i+1}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.age}}</td>
+            <td>{{c.city}}</td>
+            <td><button class="btn btn-success">Selecionar</button></td>
+        </tr>
     </tbody>
 </table>
