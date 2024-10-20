@@ -16,4 +16,16 @@ export class ClientService {
   selecionar():Observable<Client[]>{
     return this.http.get<Client[]>(this.url);
   }
+
+  cadastrar(obj:Client):Observable<Client>{
+    return this.http.post<Client>(this.url, obj);
+  }
+
+  editar(obj:Client):Observable<Client>{
+    return this.http.put<Client>(this.url, obj);
+  }
+
+  remover(codigo:number):Observable<void>{
+    return this.http.delete<void>(this.url + '/' + codigo);
+  }
 }
